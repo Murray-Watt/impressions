@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0a9cc59c-f063-4994-b7f6-cadd9a452cc4" name="Changes" comment="Initial commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/words/src/main/scala/org/mwatt/app/WordsRunner.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/words/src/main/scala/org/mwatt/domain/ReviewFile.scala" beforeDir="false" afterPath="$PROJECT_DIR$/words/src/main/scala/org/mwatt/domain/ReviewSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/words/src/main/scala/org/mwatt/domain/ReviewFileLoader.scala" beforeDir="false" afterPath="$PROJECT_DIR$/words/src/main/scala/org/mwatt/domain/ReviewFileLoader.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/words/src/test/scala/org/mwatt/domain/ReviewFileLoaderTest.scala" beforeDir="false" afterPath="$PROJECT_DIR$/words/src/test/scala/org/mwatt/domain/ReviewFileLoaderTest.scala" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="ScalaTest Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Murray-Watt&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Murray-Watt/impressions.git&quot;,
+    &quot;accountId&quot;: &quot;cc77c811-4119-42f5-abf4-0b5c56d994bc&quot;
+  }
+}</component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2gfErIGjKK0Fr7yUHXvqGrQegXN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.WordsRunner.executor": "Run",
+    "Application.org.mwatt.app.WordsRunner.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "ScalaTest.ReviewFileLoaderTest.executor": "Debug",
+    "ScalaTest.ReviewFileLoaderTest.returns a stream that contains a single review spec when a single review file is present.executor": "Run",
+    "ScalaTest.ReviewFileLoaderTest.returns a stream that contains review specs for multiple extensions and ignores unrelated files.executor": "Run",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "ScalaTest",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.ScalaTest": "org.scalatest.funsuite.AnyFunSuiteLike",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/murra/.m2/repository/org/scala-lang/scala-library/2.12.15",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Global Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\murra\git\impressions\words\src\main\scala\org\mwatt\util" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\murra\git\impressions\words\src\main\scala\org\mwatt\app" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="org.scalatest.funsuite.AnyFunSuiteLike" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.mwatt.domain" />
+    </key>
+  </component>
+  <component name="RunManager" selected="ScalaTest.ReviewFileLoaderTest.returns a stream that contains review specs for multiple extensions and ignores unrelated files">
+    <configuration name="WordsRunner" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="WordsRunner" />
+      <module name="impression-words" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.mwatt.app.WordsRunner" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="org.mwatt.app.WordsRunner" />
+      <module name="impression-words" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.mwatt.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewFileLoaderTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="impression-words" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\murra\git\impressions" />
+      <option name="testClassPath" value="org.mwatt.domain.ReviewFileLoaderTest" />
+      <option name="workingDirectory" value="C:\Users\murra\git\impressions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewFileLoaderTest.returns a stream that contains a single review spec when a single review file is present" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="impression-words" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="workingDirectory" value="C:\Users\murra\git\impressions" />
+      <option name="testClassPath" value="org.mwatt.domain.ReviewFileLoaderTest" />
+      <option name="testName" value="returns a stream that contains a single review spec when a single review file is present" />
+      <option name="workingDirectory" value="C:\Users\murra\git\impressions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReviewFileLoaderTest.returns a stream that contains review specs for multiple extensions and ignores unrelated files" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="impression-words" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="workingDirectory" value="C:\Users\murra\git\impressions" />
+      <option name="testClassPath" value="org.mwatt.domain.ReviewFileLoaderTest" />
+      <option name="testName" value="returns a stream that contains review specs for multiple extensions and ignores unrelated files" />
+      <option name="workingDirectory" value="C:\Users\murra\git\impressions" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="ScalaTest.ReviewFileLoaderTest.returns a stream that contains review specs for multiple extensions and ignores unrelated files" />
+        <item itemvalue="ScalaTest.ReviewFileLoaderTest.returns a stream that contains a single review spec when a single review file is present" />
+        <item itemvalue="ScalaTest.ReviewFileLoaderTest" />
+        <item itemvalue="Application.org.mwatt.app.WordsRunner" />
+        <item itemvalue="Application.WordsRunner" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a9cc59c-f063-4994-b7f6-cadd9a452cc4" name="Changes" comment="" />
+      <created>1716080430675</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716080430675</updated>
+      <workItem from="1716080434141" duration="75000" />
+      <workItem from="1716080632079" duration="888000" />
+      <workItem from="1716085510122" duration="553000" />
+      <workItem from="1716086303337" duration="13852000" />
+      <workItem from="1716151878915" duration="21344000" />
+      <workItem from="1716236823979" duration="8678000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1716164313236</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716164313237</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="ScalaTestRunConfiguration">
+        <watch expression="path" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
