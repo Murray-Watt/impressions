@@ -1,6 +1,6 @@
 package org.mwatt.domain
 
-import org.joda.time.{DateTime, DateTimeZone, LocalDateTime}
+import org.joda.time.{DateTimeZone, LocalDateTime}
 import org.scalatest.Matchers._
 import org.scalatest.{BeforeAndAfterEach, FunSuite}
 
@@ -72,11 +72,9 @@ class ReviewFileLoaderTest extends FunSuite with BeforeAndAfterEach {
 
   test("returns a stream that contains a single review spec when a single review file is present") {
     new Fixture(testDirectory) {
-      val reviewSpec: ReviewSpec = ReviewSpec("amazon", "headphones", "A10", "reviews.html", None)
+      val reviewSpec: ReviewSpec = ReviewSpec(reviewSource = "amazon", productType = "headphones", modelName = "A10", fileName = "reviews.html", dateCreated = None)
       val reviews: Seq[Nothing] = Seq.empty
       val expected: ReviewSpec = createReviewFile(testDirectory, reviewSpec, reviews)
-
-      val x = subject.getReviewFiles(extensions).toList
 
       subject.getReviewFiles(extensions).toList should contain only expected
     }
@@ -86,20 +84,20 @@ class ReviewFileLoaderTest extends FunSuite with BeforeAndAfterEach {
     new Fixture(testDirectory) {
       val relatedExtensions: Seq[String] = List(".htm", ".html", ".XML")
 
-      val reviewSpec1: ReviewSpec = ReviewSpec("amazon", "headphones", "A10", "reviews.html", None)
-      val reviewSpec2: ReviewSpec = ReviewSpec("amazon", "keyboards", "K12", "keyboard.htm", None)
-      val reviewSpec3: ReviewSpec = ReviewSpec("bestbuy", "monitors", "M24", "monitor.XML", None)
-      val unrelatedFileSpec: ReviewSpec = ReviewSpec("amazon", "headphones", "A10", "unrelated.txt", None)
+      val reviewSpec1: ReviewSpec = ReviewSpec(reviewSource = "amazon", productType = "headphones", modelName = "A10", fileName = "reviews.html", dateCreated = None)
+      val reviewSpec2: ReviewSpec = ReviewSpec(reviewSource = "amazon", productType = "keyboards", modelName = "K12", fileName = "keyboard.htm", dateCreated = None)
+      val reviewSpec3: ReviewSpec = ReviewSpec(reviewSource = "bestbuy", productType = "monitors", modelName = "M24", fileName = "monitor.XML", dateCreated = None)
+      val unrelatedFileSpec: ReviewSpec = ReviewSpec(reviewSource = "amazon", productType = "headphones", modelName = "A10", fileName = "unrelated.txt", dateCreated = None)
 
       val reviews: Seq[Nothing] = Seq.empty
 
       val expectedReviewSpecs: Seq[ReviewSpec] = List(
-        createReviewFile(testDirectory, reviewSpec1, reviews),
-        createReviewFile(testDirectory, reviewSpec2, reviews),
-        createReviewFile(testDirectory, reviewSpec3, reviews)
+        createReviewFile(testDirectory = testDirectory, reviewSpec = reviewSpec1, reviews = reviews),
+        createReviewFile(testDirectory = testDirectory, reviewSpec = reviewSpec2, reviews = reviews),
+        createReviewFile(testDirectory = testDirectory, reviewSpec = reviewSpec3, reviews = reviews)
       )
 
-      val resultReviewSpecs: Seq[ReviewSpec] = subject.getReviewFiles(relatedExtensions).toList
+      val resultReviewSpecs: Seq[ReviewSpec] = subject.getReviewFiles(reviewFileSuffix = relatedExtensions).toList
       resultReviewSpecs should contain theSameElementsAs  expectedReviewSpecs
 
       val resultFileNames: Seq[String] = resultReviewSpecs.map(_.fileName)

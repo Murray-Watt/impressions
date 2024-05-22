@@ -21,10 +21,10 @@ class ReviewFileLoader(baseDirectory: Path) {
 
 
 
-  def getReviewFiles(reviewFilePatterns: Seq[String]): Stream[ReviewSpec] = {
+  def getReviewFiles(reviewFileSuffix: Seq[String]): Stream[ReviewSpec] = {
     val javaStream = Files.walk(baseDirectory)
       .filter(path => !Files.isDirectory(path))
-      .filter(path => reviewFilePatterns.exists(pattern => path.toString.endsWith(pattern)))
+      .filter(path => reviewFileSuffix.exists(pattern => path.toString.endsWith(pattern)))
 
     val scalaIterator = javaStream.iterator().asScala
     val reviewSpecIterator = scalaIterator.map(createReviewSpec)
