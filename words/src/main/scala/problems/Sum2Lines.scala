@@ -3,20 +3,20 @@ package problems
 import scala.io.Source
 
 //noinspection SameParameterValue
-object GetLines extends App {
+object Sum2Lines extends App {
 
-  private def readLines(n: Int): Iterator[String] = {
+  private def readNLines(n: Int): Iterator[String] = {
     (1 to n).map(_ => scala.io.StdIn.readLine).iterator
   }
 
-  def getLines: Iterator[String] = {
+  def get2Lines: Iterator[String] = {
     val lines = Source.stdin.getLines()
     lines.take(2)
   }
 
-  println(readLines(2).map(_.toInt).sum)
+  println(readNLines(2).map(_.toInt).sum)
   println("_" * 20)
 
-  println(getLines.map(_.toInt).sum)
+  println(get2Lines.map(_.toInt).sum)
   println("_" * 20)
 }

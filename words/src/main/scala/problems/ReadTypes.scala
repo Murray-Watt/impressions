@@ -1,6 +1,6 @@
 package problems
 
-class ReadTypes extends App {
+object ReadTypes extends App {
   private val anInt = 1 // readInt()
   println(s"Int: $anInt")
 

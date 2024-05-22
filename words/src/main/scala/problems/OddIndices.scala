@@ -1,7 +1,7 @@
 package problems
 
 //noinspection ScalaUnusedSymbol
-class OddIndices {
+object OddIndices {
   private def removeEvenIndices(arr:List[Int]):List[Int] = {
     val indices = 1 until arr.size by 2
     for {

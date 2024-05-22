@@ -1,8 +1,7 @@
 package problems
 
 //noinspection ScalaUnusedSymbol
-class SumOfOddElements {
-
+object SumOfOddElements {
   private def sumOfOddElements1(arr:List[Int]):Int = {
     arr.filter(x => x % 2 != 0).sum
   }

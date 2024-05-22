@@ -2,7 +2,6 @@ package problems
 
 object FilterImpl {
 
-
   private def filterWithFoldRight[A](predicate: A => Boolean, list: List[A]): List[A] =
     list.foldRight(List.empty[A])((element, accumulator) =>
       if (predicate(element))
