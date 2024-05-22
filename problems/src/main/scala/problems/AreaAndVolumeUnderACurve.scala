@@ -8,16 +8,16 @@ object AreaAndVolumeUnderACurve {
     terms.sum
   }
 
-  def area(coefficients: List[Int], powers: List[Int], x: Double): Double = {
+  private def area(coefficients: List[Int], powers: List[Int], x: Double): Double = {
     val fx = f(coefficients, powers, x)
     Math.PI * fx * fx * 1000
   }
 
-  def tabulate(start: Int,end: Int): List[Double] = {
+  private def tabulate(start: Int, end: Int): List[Double] = {
     val stepCount = (end - start) * 1000
     List.tabulate(stepCount)(i => start.toDouble + i.toDouble * 0.001)
   }
-  def summation(func:(List[Int],List[Int],Double)=>Double,upperLimit:Int,lowerLimit:Int,coefficients:List[Int],powers:List[Int]):Double =
+  private def summation(func:(List[Int],List[Int],Double)=>Double, upperLimit:Int, lowerLimit:Int, coefficients:List[Int], powers:List[Int]):Double =
   {
     val xs = tabulate(lowerLimit,upperLimit)
     xs.map(x => func(coefficients, powers, x)).sum

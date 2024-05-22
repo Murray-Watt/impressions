@@ -1,7 +1,5 @@
 package problems
 
-import problems.FilterImpl.filterWithFoldRight
-
 object CountWithoutCount {
   def count[T](list: List[T]): Int = list.foldLeft(0)((acc, _) => acc + 1)
 

@@ -9,7 +9,7 @@ object Sum2Lines extends App {
     (1 to n).map(_ => scala.io.StdIn.readLine).iterator
   }
 
-  def get2Lines: Iterator[String] = {
+  private def get2Lines: Iterator[String] = {
     val lines = Source.stdin.getLines()
     lines.take(2)
   }
