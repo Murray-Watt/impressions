@@ -73,12 +73,20 @@ object Lambdas2 {
    */
 
   def problem4() : Unit = {
-    val selfApply: ((Int,Int) => Int, Int) => (Int => Int) = (f,x) => y => f(x,y)
+    val selfApply: (((Int, Int) => Int), Int) => (Int => Int) = (f, x) => y => f(x, f(x, y))
 
+    val sum : (Int, Int) => Int = (x, y) => x + y
+    val incrementy: Int => Int = selfApply(sum, 1)
+    val result = incrementy(2)
+
+    println(s"problem 4: $result")
   }
 
   /*
-  Problem: In Scala, create a lambda function identity that takes two arguments: an input value x and another input value y. The lambda function should return the second input value y, effectively behaving as an identity function that ignores the first input value. Then, apply identity with suitable input values x and y, and demonstrate that the resulting output is indeed equal to the second input value y.
+  Problem: In Scala, create a lambda function identity that takes two arguments: an input value x and another input value y.
+  The lambda function should return the second input value y, effectively behaving as an identity function that ignores the
+  first input value. Then, apply identity with suitable input values x and y, and demonstrate that the resulting output
+  is indeed equal to the second input value y.
 
 
   This problem builds on the previous ones by introducing the concept of an identity function using lambda functions.
@@ -89,10 +97,17 @@ object Lambdas2 {
   Finally, demonstrate that the resulting output is equal to the second input value y.
    */
 
+  def problem5() : Unit = {
+    val identity: Int => Int => Int = x => y => y
+    val result = identity(1)(2)
+    println(s"problem 5: $result")
+  }
+
   def main(args: Array[String]) :  Unit = {
     problem1()
     problem2()
     problem3()
+    problem4()
 
   }
 }
