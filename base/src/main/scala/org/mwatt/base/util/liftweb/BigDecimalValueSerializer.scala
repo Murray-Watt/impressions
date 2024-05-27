@@ -1,4 +1,4 @@
-package org.mwatt.util.liftweb
+package org.mwatt.base.util.liftweb
 
 import net.liftweb.json.JsonAST.JValue
 import net.liftweb.json._

@@ -1,7 +1,8 @@
-package org.mwatt.util
+package org.mwatt.base.util
+
 import scala.language.experimental.macros
 
-class EnumWithName(val name: String) extends Serializable
+class EnumWithName(val name: String, val pretty: Boolean = true) extends Serializable
 
 trait EnumBase[T <: EnumWithName] {
   val values: Seq[T]

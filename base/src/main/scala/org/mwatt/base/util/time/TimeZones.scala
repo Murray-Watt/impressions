@@ -1,4 +1,4 @@
-package org.mwatt.util.time
+package org.mwatt.base.util.time
 
 import org.joda.time.DateTimeZone
 

@@ -1,7 +1,7 @@
-package org.mwatt.util
+package org.mwatt.base.util
 
 import org.joda.time._
-import org.mwatt.util.time.{DateTimeFormats, TimeZones}
+import org.mwatt.base.util.time.{DateTimeFormats, TimeZones}
 
 import scala.concurrent.duration.DurationInt
 

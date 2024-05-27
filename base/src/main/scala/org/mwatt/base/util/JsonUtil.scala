@@ -1,4 +1,4 @@
-package org.mwatt.util
+package org.mwatt.base.util
 
 import io.circe.Decoder.Result
 import io.circe._
@@ -6,7 +6,7 @@ import io.circe.parser.parse
 
 /*
 REDO: TEMPORARY
- */
+  */
 
 object JsonUtil {
   def fromJson[T](json: String)(implicit decoder: Decoder[T]): T = {

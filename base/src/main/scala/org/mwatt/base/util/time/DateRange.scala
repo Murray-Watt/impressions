@@ -1,5 +1,4 @@
-package org.mwatt.util.time
-
+package org.mwatt.base.util.time
 
 import io.circe.derivation.{deriveDecoder, deriveEncoder}
 import io.circe.{Decoder, Encoder}

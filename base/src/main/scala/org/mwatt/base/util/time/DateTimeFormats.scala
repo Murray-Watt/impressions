@@ -1,7 +1,7 @@
-package org.mwatt.util.time
+package org.mwatt.base.util.time
 
-import org.joda.time.format.DateTimeFormat
 import org.joda.time._
+import org.joda.time.format.DateTimeFormat
 
 /*
 REDO: TEMPORARY

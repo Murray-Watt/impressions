@@ -1,7 +1,6 @@
-package org.mwatt.util
+package org.mwatt.base.util
 
-import org.apache.logging.log4j.LogManager
-import org.apache.logging.log4j.Logger
+import org.apache.logging.log4j.{LogManager, Logger}
 
 trait Log4s {
   val logger: Logger = LogManager.getLogger(this.getClass)

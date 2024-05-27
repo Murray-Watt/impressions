@@ -1,4 +1,5 @@
-package org.mwatt.util
+package org.mwatt.base.util
+
 import scala.language.experimental.macros
 
 object EnumHelper {

@@ -1,9 +1,9 @@
-package org.mwatt.util.time
+package org.mwatt.base.util.time
 
 import io.circe.{Decoder, Encoder}
 import org.joda.time.DateTimeConstants
-import org.mwatt.util.JsonCodecsEnumWithNameHelper.{enumWithNameDecoder, enumWithNameEncoder}
-import org.mwatt.util.{EnumBase, EnumHelper, EnumWithName}
+import org.mwatt.base.util.JsonCodecsEnumWithNameHelper.{enumWithNameDecoder, enumWithNameEncoder}
+import org.mwatt.base.util.{EnumBase, EnumWithName}
 
 
 sealed abstract class DayOfWeek(name: String, val jodaValue: Int) extends EnumWithName(name)

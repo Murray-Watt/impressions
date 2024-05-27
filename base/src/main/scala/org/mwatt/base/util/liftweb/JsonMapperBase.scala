@@ -1,4 +1,4 @@
-package org.mwatt.util.liftweb
+package org.mwatt.base.util.liftweb
 
 import net.liftweb.json.Serialization.{read, write, writePretty}
 import net.liftweb.json.{Serialization, Serializer, ShortTypeHints}
