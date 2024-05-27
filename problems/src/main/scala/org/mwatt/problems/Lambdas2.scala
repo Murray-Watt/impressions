@@ -7,7 +7,7 @@ object Lambdas2 {
   */
 
    private def problem1() : Unit = {
-     val f : (Int) => Int = x => x * 2
+     val f : Int => Int = x => x * 2
      println(s"problem 1: ${f(4)}")
    }
 
@@ -19,8 +19,8 @@ object Lambdas2 {
 
   private def problem2() : Unit = {
 
-    val addOne : (Int) => Int = x => x + 1
-    val addTwo : (Int) => Int = x => x + 2
+    val addOne : Int => Int = x => x + 1
+    val addTwo : Int => Int = x => x + 2
     val addThree : (Int => Int, Int => Int, Int)  => Int = (f1, f2, x) => f2(f1(x))
     println(s"problem 2: ${addThree(addOne,addTwo, 3)}")
   }
@@ -35,24 +35,24 @@ object Lambdas2 {
    */
 
   private def problem3() : Unit = {
-    val zero: (Int => Int) => (Int => Int) = f => x => x
-    val one: (Int => Int) => (Int => Int) = f => x => f(zero(f)(x))
-    val two: (Int => Int) => (Int => Int) = f => x => f(one(f)(x))
-    val three: (Int => Int) => (Int => Int) = f => x => f(two(f)(x))
+    val zero: (Int => Int) => Int => Int = _ => x => x
+    val one: (Int => Int) => Int => Int = f => x => f(zero(f)(x))
+    val two: (Int => Int) => Int => Int = f => x => f(one(f)(x))
+    val three: (Int => Int) => Int => Int = f => x => f(two(f)(x))
 
-    val nat: Int => ((Int => Int), Int) => Int =  n => {
+    val nat: Int => (Int => Int, Int) => Int = n => {
       def loop(k: Int)(f: Int => Int)(x: Int): Int =
         if (k == 0) x else f(loop(k - 1)(f)(x))
 
       (f, x) => loop(n)(f)(x)
     }
 
-    val fChurchN: ((Int => Int), Int) => (Int => Int) = (f, n) => (x => nat(n)(f, x))
-    val fChurch47: (Int => Int) => (Int => Int) = f => fChurchN(f, 47)
+    val fChurchN: (Int => Int, Int) => Int => Int = (f, n) => x => nat(n)(f, x)
+    val fChurch47: (Int => Int) => Int => Int = f => fChurchN(f, 47)
 
 
 
-    println(s"problem 3 - zero: ${zero(x => 0)(3)}")
+    println(s"problem 3 - zero: ${zero(_ => 0)(3)}")
     println(s"problem 3 - one: ${one(x => x * x)(3)}")
     println(s"problem 3 - two: ${two(x => x * x)(3)}")
     println(s"problem 3 - three: ${three(x => x * x)(3)}")
@@ -72,12 +72,12 @@ object Lambdas2 {
 
    */
 
-  def problem4() : Unit = {
-    val selfApply: (((Int, Int) => Int), Int) => (Int => Int) = (f, x) => y => f(x, f(x, y))
+  private def problem4() : Unit = {
+    val selfApply: ((Int, Int) => Int, Int) => Int => Int = (f, x) => y => f(x, f(x, y))
 
     val sum : (Int, Int) => Int = (x, y) => x + y
-    val incrementy: Int => Int = selfApply(sum, 1)
-    val result = incrementy(2)
+    val incrementLike: Int => Int = selfApply(sum, 1)
+    val result = incrementLike(2)
 
     println(s"problem 4: $result")
   }
@@ -97,8 +97,8 @@ object Lambdas2 {
   Finally, demonstrate that the resulting output is equal to the second input value y.
    */
 
-  def problem5() : Unit = {
-    val identity: Int => Int => Int = x => y => y
+  private def problem5() : Unit = {
+    val identity: Int => Int => Int = _ => y => y
     val result = identity(1)(2)
     println(s"problem 5: $result")
   }
@@ -108,6 +108,6 @@ object Lambdas2 {
     problem2()
     problem3()
     problem4()
-
+    problem5()
   }
 }
