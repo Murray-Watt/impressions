@@ -1,10 +1,11 @@
-package org.mwatt.domain
+package org.mwatt.words.domain
 
-import org.joda.time.DateTime
+import java.time.ZonedDateTime
+
 
 case class ReviewSpec(reviewSource: String,
                       productType: String,
                       modelName: String,
                       fileName: String,
-                      dateCreated: Option[DateTime])
+                      dateCreated: Option[ZonedDateTime])
 

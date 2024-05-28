@@ -1,11 +1,11 @@
-package org.mwatt.domain
+package org.mwatt.words.domain
 
-import org.joda.time.{DateTime, DateTimeZone, LocalDateTime}
 import org.scalatest.Matchers._
 import org.scalatest.{BeforeAndAfterEach, FunSuite}
 
 import java.nio.file._
 import java.io.IOException
+import java.time.{Instant, ZoneId}
 import java.util.{Comparator, UUID}
 
 class ReviewFileLoaderTest extends FunSuite with BeforeAndAfterEach {
@@ -59,7 +59,9 @@ class ReviewFileLoaderTest extends FunSuite with BeforeAndAfterEach {
       Files.writeString(reviewFilePath, reviewText)
       val fileCreationTime = Files.getLastModifiedTime(reviewFilePath)
 
-      val dateTime = new LocalDateTime(fileCreationTime.toInstant.toEpochMilli).toDateTime(DateTimeZone.UTC)
+      val dateTime = Instant.ofEpochMilli(fileCreationTime.toInstant.toEpochMilli)
+        .atZone(ZoneId.of("UTC"))
+
       reviewSpec.copy(dateCreated = Some(dateTime))
     }
   }
@@ -75,8 +77,6 @@ class ReviewFileLoaderTest extends FunSuite with BeforeAndAfterEach {
       val reviewSpec: ReviewSpec = ReviewSpec("amazon", "headphones", "A10", "reviews.html", None)
       val reviews: Seq[Nothing] = Seq.empty
       val expected: ReviewSpec = createReviewFile(testDirectory, reviewSpec, reviews)
-
-      val x = subject.getReviewFiles(extensions).toList
 
       subject.getReviewFiles(extensions).toList should contain only expected
     }

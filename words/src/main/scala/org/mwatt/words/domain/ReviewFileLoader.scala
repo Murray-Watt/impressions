@@ -1,7 +1,6 @@
-package org.mwatt.domain
+package org.mwatt.words.domain
 
-import org.joda.time.{DateTimeZone, LocalDateTime}
-
+import java.time.{Instant, ZoneId}
 import java.nio.file.{Files, Path}
 import scala.collection.JavaConverters._
 
@@ -15,7 +14,10 @@ class ReviewFileLoader(baseDirectory: Path) {
 
     val fileCreationTime = Files.getLastModifiedTime(path)
 
-    val dateTime = new LocalDateTime(fileCreationTime.toInstant.toEpochMilli).toDateTime(DateTimeZone.UTC)
+    val dateTime = Instant.ofEpochMilli(fileCreationTime.toInstant.toEpochMilli)
+      .atZone(ZoneId.of("UTC"))
+      .toLocalDateTime
+
     ReviewSpec(reviewSource = reviewSource, productType = productType, modelName = modelName, fileName = fileName, dateCreated = Some(dateTime))
   }
 
