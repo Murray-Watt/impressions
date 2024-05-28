@@ -8,3 +8,5 @@ hs_err_pid*
 /.idea/codeStyles/
 /.idea/shelf/
 /.idea/
+/base/target/base-1.0-SNAPSHOT.jar
+/base/target/maven-archiver/pom.properties

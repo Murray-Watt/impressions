@@ -16,7 +16,6 @@ class ReviewFileLoader(baseDirectory: Path) {
 
     val dateTime = Instant.ofEpochMilli(fileCreationTime.toInstant.toEpochMilli)
       .atZone(ZoneId.of("UTC"))
-      .toLocalDateTime
 
     ReviewSpec(reviewSource = reviewSource, productType = productType, modelName = modelName, fileName = fileName, dateCreated = Some(dateTime))
   }
